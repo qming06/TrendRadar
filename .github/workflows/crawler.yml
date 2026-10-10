@@ -41,10 +41,7 @@ on:
 
   workflow_dispatch:
 
-concurrency:
-  group: crawler-${{ github.ref_name }}
-  cancel-in-progress: true
-
+# （自媒体工作室）：已移除 concurrency 并发锁 —— 避免旧的僵尸运行占用并发组、阻塞新运行
 permissions:
   contents: read
   actions: write

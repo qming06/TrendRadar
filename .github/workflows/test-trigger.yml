@@ -1,0 +1,12 @@
+name: Quick Test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Say hello
+        run: echo "hello from quick test - $(date)"
